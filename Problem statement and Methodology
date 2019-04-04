@@ -11,18 +11,20 @@ Later if the sales employee gets to know that he/she will not meet the goal numb
 
 Questions:
 1) Which platform and process (Black box or transperant) should be followed for th eprediciton/ time series modelling? 
-What are the internal and external factors to include for predicting the Revenue, Number of bookings?
-2) What is the metric to determine the predictions of Revenue?
-3) How can the data be segmented to create meaningful insights?
+2) What are the internal and external factors to include for predicting the Revenue?
+3) Should the predictions be at a customer level or a Sales employee level?
+3) How can the data be segmented to create meaningful insights for the new customers which have not started their business with XPO Logistics?
 
 Approach:
 Followed the 6 stage framework of CRISP Data Mining process
 
 Business understanding:
 
-1) Business travel contributes $1.18 trillion to the global economy 
-2) Business Travel and Expenditures is often the second highest controllable annual expense for a company
-3) Predicting the Revenue, Number of bookings will help the company to allocate the resources more efficiently
+1) There are 4 main categories of customers - Pipeline customers, Closed won customers, Exisiting Business customers, Churn customers
+2) Inside the first 3 main categories, they are split into Local, National and 3PL cusotmers
+3) Also within the existing customers business, theree iss a possibility to renew the same amount of business or expand to additional business
+4) The sales people want a 
+
 
 Data understanding
 
