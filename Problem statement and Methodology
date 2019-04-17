@@ -1,19 +1,22 @@
 Problem statement:
 
 Initial State:
-There is no prediction of revenue for the Sales team at a customer level. The type of forecast should vary from ttype of the cusotmer
-The sales people do not know if they will reach their goals or not because they do not know how their customers will perform and ocntribute to their revenue stream
+There is no prediction of revenue for the Sales team at a customer level. The type of forecast should vary from type of the cusotmer
+The sales people do not know if they will reach their goals or not because they do not know how their customers will perform and 
+contribute to their revenue stream
 
 Desired Final State:
 1) There are forecasts for each of the customer among different categories of the cusotmers
 2) the forecasts are compared against the goals which are produced for each sales employee. 
-Later if the sales employee gets to know that he/she will not meet the goal numbers via the predictions, he takes better decisions via the 3 Power BI app built for them
+Later if the sales employee gets to know that he/she will not meet the goal numbers via the predictions, he takes better decisions 
+via the 3 Power BI app built for them
 
 Questions:
-1) Which platform and process (Black box or transperant) should be followed for th eprediciton/ time series modelling? 
+1) Which platform and process (Black box or transperant) should be followed for the prediciton/ time series modelling? 
 2) What are the internal and external factors to include for predicting the Revenue?
 3) Should the predictions be at a customer level or a Sales employee level?
-3) How can the data be segmented to create meaningful insights for the new customers which have not started their business with XPO Logistics?
+3) How can the data be segmented to create meaningful insights for the new customers which have not started their business with 
+XPO Logistics?
 
 Approach:
 Followed the 6 stage framework of CRISP Data Mining process
@@ -28,19 +31,22 @@ Business understanding:
 Data understanding
 
 1) The data was mainly divided into New customers (Pipeline or Closed Won) and Existing customers for the sake of forecasting
-2) For the new customners getting data was very tough, since there was no old shipment data for them. We had attributes like Monthly promise amount, monthly potential amount,
-Requested discount type, OBI Ind, Pricing type cd, district, region, NAICS code - Naorth american Industry Classification System code
+2) For the new customners getting data was very tough, since there was no old shipment data for them. We had attributes like Monthly 
+promise amount, monthly potential amount, Requested discount type, OBI Ind, Pricing type cd, district, region, NAICS code - North 
+American Industry Classification System code
 3) For existing customers and churn customers, we had number of shipments, revenue generated, pick up date, origin sic, destination sic,
 shipment id, NAICS code
 
 Data Preperation:
 
 1) We puchased the DNB data for the the list of 60000 existing customers and also for the list of new customers in our pipeline. 
-This was integrated with the shipment data to get a better understanding of what is the potential spend of customers towards LTL businesses
+This was integrated with the shipment data to get a better understanding of what is the potential spend of customers towards LTL 
+businesses
 
-Mdelling:
+Modelling:
 
-For the New customers, performed K means and hierarchial clustering to find groups of the new customers which might act similarly with the old customers.
+For the New customers, performed K means and hierarchial clustering to find groups of the new customers which might act similarly 
+with the old customers.
 Then take the median of the average revenue spend among the cluster.
 
 For the Existing customers, I have used Box Jenkins standard approach for time series forecasting
@@ -57,9 +63,11 @@ For the Existing customers, I have used Box Jenkins standard approach for time s
 6) Forecasting 
 
 Evaluation:
-1) Have used the metric RMSEto evaluate the difference of Actual and predicted revenues of the time seires model
-2) Baseline model which was created was the mean of the Revenue at the level of data analysis. Post which the above mentioned evaluation metrics were applied for comparison
+1) Have used the metric RMSE to evaluate the difference of Actual and predicted revenues of the time seires model
+2) Baseline model which was created was the mean of the Revenue at the level of data analysis. Post which the above mentioned evaluation 
+metrics were applied for comparison
 3) Have used SSE to evaluate the clustering algorithms
 
 Deployment (Next Steps):
-1) It can also be automated so that on a monthly basis when the data changes, the predictions can be produced and used. We can connect the model to the platform from where the data is stored
+1) It can also be automated so that on a monthly basis when the data changes, the predictions can be produced and used.
+We can connect the model to the platform from where the data is stored
